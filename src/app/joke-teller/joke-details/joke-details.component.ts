@@ -29,6 +29,6 @@ export class JokeDetailsComponent implements OnInit {
   }
 
   private getJoke(): void {
-    this.joke$ = this.apiService.getRandomJoke(this.category)
+    this.joke$ = this.apiService.getRandomJoke(this.category);
   }
 }
