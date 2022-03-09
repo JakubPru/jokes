@@ -1,3 +1,11 @@
+# Disclaimer
+
+I do realize that right now the structure of modules does not make much sense as the whole app loads all modules at start anyways, but well...
+The same goes to a lot of stuff in the app, but the scope of the app wouldn't allow me to show almost anything i was asked to show in the 3rd 
+page of the assignment if i did only what is neccesary.
+
+
+
 # Jokes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.

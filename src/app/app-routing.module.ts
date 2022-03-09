@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./joke-teller/joke-teller.module').then(module => module.JokeTellerModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ApiService } from 'src/app/shared/api.service';
 
 import { JokeListComponent } from './joke-list.component';
 
@@ -8,7 +11,15 @@ describe('JokeListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JokeListComponent ]
+      declarations: [ JokeListComponent ],
+      imports: [
+        RouterTestingModule
+      ],
+      providers: [{ 
+          provide: ApiService, useValue: {
+          getCategories() {}
+        }}
+      ] 
     })
     .compileComponents();
   });
