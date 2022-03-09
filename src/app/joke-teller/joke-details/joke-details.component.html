@@ -1,1 +1,3 @@
-<p>joke-details works!</p>
+<button routerLink="">back</button>
+<p *ngIf="joke$ | async as joke">{{joke?.value}}</p>
+<button (click)="onClickAnotherOne()">Another one</button>

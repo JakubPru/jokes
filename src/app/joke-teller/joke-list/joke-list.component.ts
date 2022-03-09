@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/shared/api.service';
 
@@ -11,13 +12,16 @@ export class JokeListComponent implements OnInit {
 
   public categories$: Observable<string[]>;
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.categories$ = this.apiService.getCategories();
   }
 
-  onClick(category: string) {
-    console.log(category);
+  goToCategory(category: string) {
+    this.router.navigate(['category', category]);
   }
 }

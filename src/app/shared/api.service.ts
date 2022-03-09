@@ -10,6 +10,9 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   getCategories(): Observable<string[]> {
-    return this.httpClient.get("https://api.chucknorris.io/jokes/categories", {}) as Observable<string[]>;
+    return this.httpClient.get<string[]>("https://api.chucknorris.io/jokes/categories", {});
   } 
+  getRandomJoke(category: string): Observable<string> {
+    return this.httpClient.get<string>("https://api.chucknorris.io/jokes/random?category=" + category, {});
+  }
 }
