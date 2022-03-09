@@ -20,8 +20,4 @@ export class JokeListComponent implements OnInit {
   ngOnInit(): void {
     this.categories$ = this.apiService.getCategories();
   }
-
-  goToCategory(category: string) {
-    this.router.navigate(['category', category]);
-  }
 }
