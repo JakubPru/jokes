@@ -1,3 +1,7 @@
 <div *ngIf="categories$ | async as categories">
-    <button *ngFor="let category of categories" routerLink="{{'category/' + category}}">{{category | uppercase}}</button>
+    <div class="wrapper">
+        <div *ngFor="let category of categories" >
+            <button routerLink="{{'category/' + category}}" class="category">{{category | uppercase}}</button>
+        </div>
+    </div>
 </div>

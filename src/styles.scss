@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: '04b_30';
+    src: url('/font/04b_30.woff') format('woff')
+}
+
+body {
+    font: 16px/1.5 "Courier New", Arial, sans-serif;
+}
+
+@media only screen and (min-width: 767px) {
+    body {
+        margin: 5em;
+    }
+}
+
+button {
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 12px;
+    white-space: normal;
+}
