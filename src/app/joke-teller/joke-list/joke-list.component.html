@@ -1,0 +1,3 @@
+<div *ngIf="categories$ | async as categories">
+    <button *ngFor="let category of categories" (click)="onClick(category)">{{category}}</button>
+</div>
